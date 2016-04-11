@@ -1,0 +1,337 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/*=============================
+=            FONTS            =
+=============================*/
+/*-----  End of FONTS  ------*/
+/*=============================================================
+=            Media Queries            =
+=============================================================*/
+/*=============================================================
+=            iPhone 5 & 5S Media Queries            =
+=============================================================*/
+/*----------  iPhone 5 & 5S in portrait & landscape  ----------*/
+/*==============================================
+=            iPhone 6 Media Queries            =
+==============================================*/
+/*----------  iPhone 6 in portrait & landscape  ----------*/
+/*======================================================
+=            Turn Off Number Input Spinners            =
+======================================================*/
+/*=====================================
+=            Custom styles            =
+=====================================*/
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+}
+.clear {
+  clear: both;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  color: #555559;
+  font-family: 'Open Sans';
+  font-weight: 400;
+}
+html,
+body {
+  height: 100%;
+  -webkit-user-select: text;
+     -moz-user-select: text;
+      -ms-user-select: text;
+          user-select: text;
+}
+* {
+  box-sizing: border-box;
+}
+input[type="text"]::-webkit-input-placeholder,
+input[type="email"]::-webkit-input-placeholder,
+input[type="number"]::-webkit-input-placeholder,
+input[type="search"]::-webkit-input-placeholder,
+input[type="url"]::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #555559;
+}
+input[type="text"]:-moz-placeholder,
+input[type="email"]:-moz-placeholder,
+input[type="number"]:-moz-placeholder,
+input[type="search"]:-moz-placeholder,
+input[type="url"]:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #555559;
+}
+input[type="text"]::-moz-placeholder,
+input[type="email"]::-moz-placeholder,
+input[type="number"]::-moz-placeholder,
+input[type="search"]::-moz-placeholder,
+input[type="url"]::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: #555559;
+}
+input[type="text"]:-ms-input-placeholder,
+input[type="email"]:-ms-input-placeholder,
+input[type="number"]:-ms-input-placeholder,
+input[type="search"]:-ms-input-placeholder,
+input[type="url"]:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #555559;
+}
+input,
+textarea,
+button,
+select {
+  color: inherit;
+  font: inherit;
+}
+.f_clear {
+  height: auto;
+}
+.container {
+  height: auto;
+  width: 100%;
+}
+.wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+.content {
+  width: 100%;
+}
+@media only screen and  (min-width: 1200px) 
+                  and (max-width: 1599px) 
+                  and (-webkit-min-device-pixel-ratio: 1) {
+  .content {
+    width: 1140px;
+  }
+}
+.btn {
+  background-clip: padding-box;
+  border-radius: none;
+  border: none;
+  display: inline-block;
+  outline: none;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.btn:hover {
+  cursor: pointer;
+  opacity: .75;
+}
+.btn[disabled] {
+  background-color: gray;
+}
+.link:hover,
+.link:focus {
+  text-decoration: none;
+}
+/*-----  End of Custom styles  ------*/
+/*
+LESS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: @icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+@icon-home: x y offset_x offset_y width height total_width total_height image_path name;
+
+At the bottom of this section, we provide information about the spritesheet itself
+@spritesheet: width height image @spritesheet-sprites;
+*/
+/*
+These "retina group" variables are mappings for the naming and pairing of normal and retina sprites.
+
+The list formatted variables are intended for mixins like `retina-sprite` and `retina-sprites`.
+*/
+/*
+The provided classes are intended to be used with the array-like variables
+
+.icon-home {
+  .sprite-width(@icon-home);
+}
+.icon-email {
+  .sprite(@icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+/*
+The `retina-sprite` class sets up rules and a media query for a sprite/retina sprite.
+  It should be used with a "retina group" variable.
+
+The media query is from CSS Tricks: https://css-tricks.com/snippets/css/retina-display-media-query/
+
+@icon-home-group: 'icon-home' @icon-home @icon-home-2x;
+
+.icon-home {
+  .retina-sprite(@icon-home-group);
+}
+*/
+/*
+The `.sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of LESS
+
+This must be run when you have at least 2 sprites.
+  If run with a single sprite, then there will be reference errors.
+
+.sprites(@spritesheet-sprites);
+*/
+/*
+The `.retina-sprites` mixin generates a CSS rule and media query for retina groups
+  This yields the same output as CSS retina template but can be overridden in LESS
+
+.retina-sprites(@retina-groups);
+*/

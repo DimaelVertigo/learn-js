@@ -1,0 +1,83 @@
+/*=====================================
+=            Custom styles            =
+=====================================*/
+.clearfix:before, .clearfix:after {
+	content: " ";
+	display: table;
+}
+.clearfix:after {
+	clear: both;
+}
+.clearfix {
+	*zoom: 1;
+}
+.clear {
+	clear: both;
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	font-size: 1.8rem;
+	line-height: 2.4rem;
+	color: @brand;
+	font-family: 'Open Sans';
+	font-weight: 400;
+}
+html, body {
+	height: 100%;
+	user-select: text;
+}
+* {
+	box-sizing: border-box;
+}
+input[type="text"], input[type="email"], input[type="number"], input[type="search"], input[type="url"], textarea {
+	.placeholder(@color: @brand)
+}
+input, textarea, button, select {
+	color: inherit;
+	font: inherit;
+}
+.f_clear {
+	height: auto;
+}
+.container {
+	height: auto;
+	width: 100%;
+}
+.wrapper {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+.content {
+	width: 100%;
+	@media @desktop {
+		width: 1140px;
+	}
+}
+.btn {
+	background-clip: padding-box;
+	border-radius: none;
+	border: none;
+	display: inline-block;
+	outline: none;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+
+	&:hover {
+		cursor: pointer;
+		opacity: .75;
+	}
+	&[disabled] {
+		background-color: gray;
+	}
+}
+.link {
+	&:hover, &:focus {
+		text-decoration: none;
+	}
+}
+
+/*-----  End of Custom styles  ------*/

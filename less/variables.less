@@ -1,0 +1,151 @@
+@wrapper: 1200px;
+
+// Fonts
+
+// Colors
+@brand: #555559;
+@gray: #2e2e2e;
+@blue: #286782;
+/*=============================================================
+=            Media Queries            =
+=============================================================*/
+@mobile:      ~"only screen and (min-width : 320px) and (max-width : 766px)";
+// @smartphone:  ~"only screen and (min-width: 480px) and (max-width: 766px)";
+@tablet:      ~"only screen and (min-width: 767px) and (max-width: 1199px)";
+@desktop:     ~"only screen and  (min-width: 1200px) 
+                  and (max-width: 1599px) 
+                  and (-webkit-min-device-pixel-ratio: 1)";
+
+@1600:~"only screen and (min-width: 1600px)";
+@1800:~"only screen and (min-width: 1800px)";
+
+@retina:      ~"only screen and (-webkit-min-device-pixel-ratio: 2),
+          only screen and (   min--moz-device-pixel-ratio: 2),
+          only screen and (     -o-min-device-pixel-ratio: 2/1),
+          only screen and (        min-device-pixel-ratio: 2),
+          only screen and (                min-resolution: 192dpi),
+          only screen and (                min-resolution: 2dppx)";
+
+/*=============================================================
+=            iPhone 5 & 5S Media Queries            =
+=============================================================*/
+
+/*----------  iPhone 5 & 5S in portrait & landscape  ----------*/
+
+@iphone5: ~"only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px)
+and (-webkit-device-pixel-ratio: 2)";
+
+/*==============================================
+=            iPhone 6 Media Queries            =
+==============================================*/
+
+/*----------  iPhone 6 in portrait & landscape  ----------*/
+
+@iphone6: ~"only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px)
+and (-webkit-device-pixel-ratio: 2)";
+
+// Mixins
+.transition(@duration:0.2s, @ease:ease-out) {
+	-webkit-transition: all @duration @ease;
+	-moz-transition: all @duration @ease;
+	-o-transition: all @duration @ease;
+	transition: all @duration @ease;
+}
+
+.triangle-base() {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    -moz-transform: scale(.9999);
+}
+.triangle(@direction, @size, @color) {
+    .triangle(@direction, @size * 2, @size, @color);
+}
+.triangle(@direction, @width, @height, @color) when (@direction = up) {
+    .triangle-base();
+    border-left: (@width / 2) solid transparent;
+    border-right: (@width / 2) solid transparent;
+    border-bottom: @height solid @color;
+}
+.triangle(@direction, @width, @height, @color) when (@direction = down) {
+    .triangle-base();
+    border-left: (@width / 2) solid transparent;
+    border-right: (@width / 2) solid transparent;
+    border-top: @height solid @color;
+}
+.triangle(@direction, @width, @height, @color) when (@direction = left) {
+    .triangle-base();
+    border-top: (@width / 2) solid transparent;
+    border-bottom: (@width / 2) solid transparent;
+    border-right: @height solid @color;
+}
+.triangle(@direction, @width, @height, @color) when (@direction = right) {
+    .triangle-base();
+    border-top: (@width / 2) solid transparent;
+    border-bottom: (@width / 2) solid transparent;
+    border-left: @height solid @color;
+}
+
+.placeholder(@color:#aaa, @element: 08121991) {
+  .inception (@arguments) when not (@element = 08121991) {
+    @{element}::-webkit-input-placeholder {
+       color: @color;
+    }
+    @{element}:-moz-placeholder {
+       color: @color;
+    }
+    @{element}::-moz-placeholder {
+       color: @color;
+    }
+    @{element}:-ms-input-placeholder {
+       color: @color;
+    }
+  }
+  .inception (@arguments) when (@element = 08121991) {
+    &::-webkit-input-placeholder {
+       color: @color;
+    }
+    &:-moz-placeholder {
+       color: @color;
+    }
+    &::-moz-placeholder {
+       color: @color;
+    }
+    &:-ms-input-placeholder {
+       color: @color;
+    }
+  }
+  .inception(@arguments);
+}
+
+.opacity(@opacity:0.5) {
+	-moz-opacity: @opacity;
+	-khtml-opacity: @opacity;
+	-webkit-opacity: @opacity;
+	opacity: @opacity;
+	@opperc: @opacity * 100;
+
+	-ms-filter:~"progid:DXImageTransform.Microsoft.Alpha(opacity=@ {
+		opperc
+	}
+	)";
+
+	filter:~"alpha(opacity=@ {
+		opperc
+	}
+	)";
+}
+
+/*======================================================
+=            Turn Off Number Input Spinners            =
+======================================================*/
+// input[type=number]::-webkit-inner-spin-button, 
+// input[type=number]::-webkit-outer-spin-button { 
+//   -webkit-appearance: none; 
+//   margin: 0; 
+// }
